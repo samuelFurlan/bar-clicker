@@ -1,0 +1,167 @@
+/* === style.mobile.css === */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  background: url("../fundo.png") no-repeat center center fixed;
+  background-size: cover;
+  color: #f5deb3;
+  font-family: "Segoe UI", sans-serif;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+#resetBtn {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  font-size: 14px;
+  padding: 8px 16px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+#resetBtn:hover {
+  opacity: 1;
+  background-color: #444;
+}
+
+.main-info {
+  margin-top: 60px;
+}
+
+#game-area {
+  position: relative;
+  width: 160px;
+  height: 240px;
+  margin: 20px auto;
+}
+
+#copo-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+
+#copo {
+  width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  cursor: pointer;
+}
+
+button {
+  font-size: 15px;
+  padding: 10px 16px;
+  background: #8b0000;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  margin: 5px auto;
+  cursor: pointer;
+  display: block;
+}
+
+button:hover {
+  background: #b22222;
+}
+
+button.disabled {
+  background-color: #ccc !important;
+  color: #666 !important;
+  cursor: not-allowed;
+}
+
+.section {
+  background: rgba(0, 0, 0, 0.75);
+  margin: 10px auto;
+  padding: 10px;
+  width: 90%;
+  border-radius: 8px;
+}
+
+.section h3 {
+  margin-top: 0;
+}
+
+#message {
+  font-size: 14px;
+  margin-top: 10px;
+  color: gold;
+}
+
+/* === Botões laterais fixos === */
+.side-btn {
+  position: fixed;
+  top: 40%;
+  z-index: 999;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  color: white;
+  background-color: #8b0000;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.side-btn.left {
+  left: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.side-btn.right {
+  right: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* === Menus ocultos laterais === */
+.side-menu {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 70%;
+  max-width: 300px;
+  background: rgba(0, 0, 0, 0.95);
+  padding: 20px 10px;
+  overflow-y: auto;
+  z-index: 998;
+  transition: transform 0.3s ease;
+}
+
+.side-menu.left {
+  left: 0;
+  transform: translateX(-100%);
+}
+
+.side-menu.right {
+  right: 0;
+  transform: translateX(100%);
+}
+
+/* Quando ativa */
+.side-menu.active.left {
+  transform: translateX(0);
+}
+
+.side-menu.active.right {
+  transform: translateX(0);
+}

@@ -1,0 +1,52 @@
+/* === drinks.mobile.css === */
+
+#drinksList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.drink-card {
+  background: #222;
+  border-radius: 10px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid transparent;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.drink-card:hover {
+  background: #333;
+}
+
+.drink-card img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 6px;
+}
+
+.drink-card p {
+  margin: 0;
+  font-size: 11px;
+  color: #fff8dc;
+  text-align: center;
+}
+
+.drink-card.selected {
+  border-color: gold;
+  background: #444;
+}
+
+.drink-card.locked {
+  opacity: 0.5;
+}
+
+.drink-card.locked.ativavel {
+  opacity: 1;
+  border: 2px dashed lime;
+}

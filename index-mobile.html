@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bar Clicker - Mobile</title>
+    <link rel="stylesheet" href="assets/_css/style.mobile.css" />
+    <link rel="stylesheet" href="assets/_css/animations.css" />
+    <link rel="stylesheet" href="assets/_css/drinks.mobile.css" />
+    <link rel="icon" type="image/x-icon" href="assets/drinks/beer.png" />
+  </head>
+  <body id="bolhas-container">
+    <!-- Botões laterais -->
+    <button id="btnMelhorias" class="side-btn left">🔧</button>
+    <button id="btnBebidas" class="side-btn right">🍹</button>
+
+    <!-- Botão reset centralizado -->
+    <button id="resetBtn">🔄 Resetar Jogo</button>
+
+    <!-- Informacoes principais -->
+    <div class="main-info">
+      <h1>🍺 Bar Clicker</h1>
+      <h2>Moedas: 💰 <span id="coins">0</span></h2>
+      <p id="ganhosPorSegundo">💰 0 / s automático</p>
+    </div>
+
+    <div id="game-area">
+      <div id="copo-wrapper">
+        <img id="copo" src="assets/drinks/beer.png" alt="Copo" />
+      </div>
+    </div>
+
+    <button id="helperUpgradeBtn">Contratar Ajudante (💰 <span id="helpersCost">50</span>)</button>
+    <p>Ajudantes: <span id="helpers">0</span></p>
+    <p id="message"></p>
+
+    <!-- Menus expansíveis -->
+    <div id="menuMelhorias" class="side-menu left">
+      <h3>🔧 Melhorias</h3>
+      <div id="upgradeMenu">
+        <div>
+          <button onclick="makeUpgrade('userClick')" id="userClickButton">
+            <h4>Mouse Click (💰 <span id="userClickCost">100</span>)</h4>
+          </button>
+          <p>+ <span id="userClickLevel">1</span> por click</p>
+          <hr />
+
+          <button onclick="makeUpgrade('helperClick')" id="helperClickButton">
+            <h4>Ajudante Click (💰 <span id="helperClickCost">100</span>)</h4>
+          </button>
+          <p><span id="helperClickLevel">1</span></p>
+          <hr />
+
+          <button onclick="makeUpgrade('velocityClick')" id="velocityClickButton">
+            <h4>Velocidade Ajudante (💰 <span id="velocityClickCost">200</span>)</h4>
+          </button>
+          <p><span id="velocityClickLevel">0</span></p>
+          <hr />
+          <button onclick="makeUpgrade('motivationChance')" id="motivationChanceButton">
+            <h4>Chance Crítico (💰 <span id="motivationChanceCost">300</span>)</h4>
+          </button>
+          <p>Chance de clique duplo: <span id="motivationChanceLevel">0%</span></p>
+          <hr />
+        </div>
+      </div>
+    </div>
+
+    <div id="menuBebidas" class="side-menu right">
+      <h3>🍹 Novas Bebidas</h3>
+      <div id="drinksList"></div>
+    </div>
+
+    <!-- Scripts JS -->
+    <script src="assets/_js/config.js"></script>
+    <script src="assets/_js/gameState.js"></script>
+    <script src="assets/_js/save.js"></script>
+    <script src="assets/_js/engine.js"></script>
+    <script src="assets/_js/ui.js"></script>
+    <script src="assets/_js/main.js"></script>
+    <script src="assets/_js/upgrades.js"></script>
+    <script src="assets/_js/drinks.js"></script>
+
+    <!-- Sons -->
+    <audio id="clickSound" src="assets/sounds/user_click.mp3" preload="auto"></audio>
+    <audio id="happyHourSound" src="assets/sounds/happy-hour.mp3" preload="auto"></audio>
+  </body>
+</html>
